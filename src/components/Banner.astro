@@ -1,0 +1,220 @@
+---
+import sol from "../assets/sol.png";
+---
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+  .banner {
+    background-color: #ebe5dc; /* beige */
+    color: #333; /* dark text */
+    padding: 2rem; /* p-8 */
+    text-align: left;
+    font-family: "Roboto", sans-serif; /* more legible y atractiva */
+    position: relative;
+    overflow: hidden; /* Ensure the overflow is hidden */
+  }
+
+  .content {
+    margin: 0 auto;
+    max-width: 1420px; /* max width for centering */
+    width: 100%;
+    padding: 0 1rem; /* Add padding for small screens */
+  }
+
+  .banner h1 {
+    font-size: 3rem; /* text-5xl */
+    font-weight: 400; /* normal */
+    margin-bottom: 0.5rem; /* mb-2 */
+  }
+
+  .banner h2 {
+    font-size: 2rem; /* text-3xl */
+    font-weight: 300; /* light */
+    color: #555; /* text-gray-600 */
+    font-style: italic;
+    margin-bottom: 1rem; /* mb-4 */
+  }
+
+  .banner .contact-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    font-size: 1rem; /* text-base */
+    font-weight: 500; /* medium */
+    color: #333; /* dark text */
+    background-color: rgba(235, 229, 220, 0.7); /* translucent beige */
+    border: 2px solid #333; /* dark border */
+    border-radius: 25px; /* rounded */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .banner .contact-button:hover {
+    background-color: #333; /* dark background */
+    color: #fff; /* white text */
+  }
+
+  .banner .sol {
+    position: absolute;
+    opacity: 0.5;
+    animation: rotate 20s linear infinite; /* Add animation for constant rotation */
+    transition: transform 1s, filter 2s; /* Increase transition duration to 1s */
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .banner .sol:hover {
+    animation: rotate 2s linear infinite; /* Faster rotation on hover */
+    transform: rotate(360deg) scale(1.1);
+    opacity: 0.7;
+  }
+
+  .sol-1 {
+    top: 40%;
+    left: 850px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .sol-2 {
+    top: 70%;
+    left: 1150px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .sol-3 {
+    top: -30%;
+    left: 1300px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .sol-4 {
+    top: -40%;
+    left: 1450px;
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (max-width: 1024px) {
+    .banner h1 {
+      font-size: 2.5rem; /* text-4xl */
+    }
+
+    .banner h2 {
+      font-size: 1.75rem; /* text-2xl */
+    }
+
+    .sol-1 {
+      top: 30%;
+      left: 600px;
+      width: 250px;
+      height: 250px;
+    }
+
+    .sol-2 {
+      top: 60%;
+      left: 800px;
+      width: 150px;
+      height: 150px;
+    }
+
+    .sol-3 {
+      top: -20%;
+      left: 900px;
+      width: 120px;
+      height: 120px;
+    }
+
+    .sol-4 {
+      top: -30%;
+      left: 1000px;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .banner h1 {
+      font-size: 2rem; /* text-3xl */
+    }
+
+    .banner h2 {
+      font-size: 1.5rem; /* text-2xl */
+    }
+
+    .banner .sol {
+      width: 100px;
+      height: 100px;
+    }
+
+    .sol-1 {
+      top: 10%;
+      left: -100px;
+    }
+    .sol-2 {
+      top: 30%;
+      left: 50px;
+    }
+    .sol-3 {
+      top: 50%;
+      left: -150px;
+    }
+    .sol-4 {
+      top: 70%;
+      left: 100px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .banner h1 {
+      font-size: 1.5rem; /* text-xl */
+    }
+
+    .banner h2 {
+      font-size: 1.25rem; /* text-lg */
+    }
+
+    .banner .sol {
+      width: 80px;
+      height: 80px;
+    }
+
+    .sol-1 {
+      top: 10%;
+      left: -80px;
+    }
+    .sol-2 {
+      top: 30%;
+      left: 40px;
+    }
+    .sol-3 {
+      top: 50%;
+      left: -120px;
+    }
+    .sol-4 {
+      top: 70%;
+      left: 80px;
+    }
+  }
+</style>
+
+<div class="banner">
+  <div class="content">
+    <h1>Facundo M. Ruiz Perez</h1>
+    <h2>Desarrollador fullstack & IoT</h2>
+    <a href="#contact" class="contact-button">Contáctame</a>
+  </div>
+  <img src={sol.src} alt="Sol 1" class="sol sol-1" />
+  <img src={sol.src} alt="Sol 2" class="sol sol-2" />
+  <img src={sol.src} alt="Sol 3" class="sol sol-3" />
+  <img src={sol.src} alt="Sol 4" class="sol sol-4" />
+</div>

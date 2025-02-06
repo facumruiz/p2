@@ -1,0 +1,59 @@
+---
+---
+
+<style>
+    .contact-section {
+      background-color: #ebe5dc; /* beige */
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    .contact-section h2 {
+      font-size: 2rem; /* text-3xl */
+      margin-bottom: 1rem; /* mb-4 */
+    }
+  
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem; /* space-y-4 */
+    }
+  
+    .contact-links a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem; /* py-3 px-6 */
+      font-size: 1rem; /* text-base */
+      font-weight: 500; /* medium */
+      color: #333; /* dark text */
+      background-color: rgba(235, 229, 220, 0.7); /* translucent beige */
+      border: 2px solid #333; /* dark border */
+      border-radius: 25px; /* rounded */
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  
+    .contact-links a:hover {
+      background-color: #333; /* dark background */
+      color: #fff; /* white text */
+    }
+  
+    .contact-info {
+      margin-top: 1rem;
+      font-size: 1rem; /* text-base */
+      color: #333; /* dark text */
+    }
+  </style>
+  
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+      
+      <div class="contact-info">
+        <p>Phone: +1234567890</p>
+        <p>Email: example@example.com</p>
+      </div>
+      <a href="mailto:example@example.com">Send an Email</a>
+      <a href="https://calendar.google.com/calendar/u/0/r/eventedit" target="_blank" rel="noopener noreferrer">Schedule a Google Calendar Event</a>
+    </div>
+  </section>

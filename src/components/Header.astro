@@ -1,0 +1,83 @@
+---
+import linkedinIcon from "../assets/linkedin.svg";
+import githubIcon from "../assets/github.svg";
+import emailIcon from "../assets/envelope-at-fill.svg";
+---
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+  header {
+    background-color: #ebe5dc; /* beige */
+    color: #333; /* dark text */
+    padding: 1rem; /* p-4 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; /* Ensure the header is above the banner images */
+    position: relative;
+  }
+
+  .content {
+    margin: 0 auto;
+    max-width: 1420px; /* max width for centering */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1rem; /* space-x-4 */
+  }
+
+  nav ul li a {
+    color: #333; /* dark text */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #9ca3af; /* hover:text-gray-400 */
+  }
+
+  .social-icons a {
+    color: inherit;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #9ca3af; /* hover:text-gray-400 */
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>
+
+<header>
+  <div class="content">
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a href="#home" class="hover:text-gray-400">Inicio</a></li>
+        <li><a href="#about" class="hover:text-gray-400">Sobre mí</a></li>
+        <li><a href="#projects" class="hover:text-gray-400">Proyectos</a></li>
+        <li><a href="#contact" class="hover:text-gray-400">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons flex space-x-4">
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <img src={linkedinIcon.src} alt="LinkedIn" class="h-6 w-6" />
+      </a>
+      <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+        <img src={githubIcon.src} alt="GitHub" class="h-6 w-6" />
+      </a>
+      <a href="mailto:example@example.com">
+        <img src={emailIcon.src} alt="Email" class="h-6 w-6" />
+      </a>
+    </div>
+  </div>
+</header>
