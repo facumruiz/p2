@@ -9,10 +9,12 @@
   height: 0;
 }
 
-/* Ocultar la barra de desplazamiento en navegadores Firefox */
+/* Exagerar scroll con el ratón suave */
 html {
   scrollbar-width: none; /* Firefox */
   scrollbar-color: transparent transparent; /* Firefox */
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory; /* Exagerar scroll suave */
 }
 
 /* Ocultar la barra de desplazamiento en Internet Explorer y Edge */

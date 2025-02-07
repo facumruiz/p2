@@ -28,32 +28,34 @@ import emailIcon from "../assets/envelope-at-fill.svg";
 
   nav ul {
     display: flex;
-    gap: 1rem; /* space-x-4 */
   }
 
   nav ul li a {
-    color: #333; /* dark text */
+    color: #0e0d0d; /* dark text */
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: block; /* make the anchor tag a block element */
+    padding: 0.3rem 0.8rem; /* increase padding to cover the entire column */
   }
 
   nav ul li a:hover {
-    color: #9ca3af; /* hover:text-gray-400 */
+    color: #ffffff; /* change text color on hover */
+    background-color: #999693; /* change background color on hover */
   }
 
-  .social-icons a {
-    color: inherit;
-    transition: color 0.3s;
+  nav ul li a {
+    border-radius: 5px; /* rounded border */
+    background-color: #ebe5dc; /* light gray background */
   }
 
-  .social-icons a:hover {
-    color: #9ca3af; /* hover:text-gray-400 */
-  }
+  
 
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      gap: 0.5rem;
+  @media (max-width: 1024px) {
+    nav ul li a {
+      color: #333; /* dark text */
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 20px;
     }
   }
 </style>
@@ -63,20 +65,31 @@ import emailIcon from "../assets/envelope-at-fill.svg";
     <nav>
       <ul class="flex space-x-4">
         <li><a href="#home" class="hover:text-gray-400">Inicio</a></li>
-        <li><a href="#about" class="hover:text-gray-400">Sobre mí</a></li>
-        <li><a href="#projects" class="hover:text-gray-400">Proyectos</a></li>
+        <li><a href="#projects" class="hover:text-gray-400">Projects</a></li>
+        <li><a href="#about" class="hover:text-gray-400">About Me</a></li>
+       
         <li><a href="#contact" class="hover:text-gray-400">Contacto</a></li>
       </ul>
     </nav>
-    <div class="social-icons flex space-x-4">
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-        <img src={linkedinIcon.src} alt="LinkedIn" class="h-6 w-6" />
+    <div class="social-icons flex space-x-2">
+      <a
+      href="https://www.linkedin.com/in/facumruiz"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:text-gray-400"
+      >
+      <img src={linkedinIcon.src} alt="LinkedIn" class="h-6 w-6" />
       </a>
-      <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
-        <img src={githubIcon.src} alt="GitHub" class="h-6 w-6" />
+      <a
+      href="https://www.github.com/facumruiz"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:text-gray-400"
+      >
+      <img src={githubIcon.src} alt="GitHub" class="h-6 w-6" />
       </a>
-      <a href="mailto:example@example.com">
-        <img src={emailIcon.src} alt="Email" class="h-6 w-6" />
+      <a href="mailto:facundoruizdev@gmail.com" class="hover:text-gray-400">
+      <img src={emailIcon.src} alt="Email" class="h-6 w-6" />
       </a>
     </div>
   </div>
