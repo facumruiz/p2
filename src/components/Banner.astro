@@ -1,5 +1,5 @@
 ---
-import sol from "../assets/sol.png";
+import sol from "../assets/sol.svg";
 ---
 
 <style>
@@ -39,13 +39,13 @@ import sol from "../assets/sol.png";
   }
 
   .banner h1 {
-    font-size: 3rem; /* text-5xl */
-    font-weight: 400; /* normal */
+    font-size: 5rem; /* text-5xl */
+    font-weight: 700; /* bold */
     margin-bottom: 0.5rem; /* mb-2 */
   }
 
   .banner h2 {
-    font-size: 2rem; /* text-3xl */
+    font-size: 3.1rem; /* text-3xl */
     font-weight: 300; /* light */
     color: #555; /* text-gray-600 */
     font-style: italic;
@@ -54,8 +54,8 @@ import sol from "../assets/sol.png";
 
   .banner .contact-button {
     display: inline-block;
-    padding: 0.75rem 1.5rem; /* py-3 px-6 */
-    font-size: 1rem; /* text-base */
+    padding: 1rem 2rem; /* py-4 px-8 */
+    font-size: 1.25rem; /* text-lg */
     font-weight: 500; /* medium */
     color: #333; /* dark text */
     background-color: rgba(235, 229, 220, 0.7); /* translucent beige */
@@ -123,11 +123,16 @@ import sol from "../assets/sol.png";
 
   @media (max-width: 1024px) {
     .banner h1 {
-      font-size: 3.5rem; /* text-4xl */
+      font-size: 3.6rem; /* text-4xl */
     }
 
     .banner h2 {
-      font-size: 2rem; /* text-2xl */
+      font-size: 2.3rem; /* text-2xl */
+    }
+
+    .banner .contact-button {
+      font-size: 1.5rem; /* text-lg */
+      padding: 1rem 2rem; /* py-4 px-8 */
     }
 
     .sol-1 {
@@ -145,69 +150,6 @@ import sol from "../assets/sol.png";
     }
   }
 
-  @media (max-width: 768px) {
-    .banner h1 {
-      font-size: 2rem; /* text-3xl */
-    }
-
-    .banner h2 {
-      font-size: 1.5rem; /* text-2xl */
-    }
-
-    .banner .sol {
-      width: 100px;
-      height: 100px;
-    }
-
-    .sol-1 {
-      top: 10%;
-      left: -100px;
-    }
-    .sol-2 {
-      top: 30%;
-      left: 50px;
-    }
-    .sol-3 {
-      top: 50%;
-      left: -150px;
-    }
-    .sol-4 {
-      top: 70%;
-      left: 100px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .banner h1 {
-      font-size: 1.5rem; /* text-xl */
-    }
-
-    .banner h2 {
-      font-size: 1.25rem; /* text-lg */
-    }
-
-    .banner .sol {
-      width: 80px;
-      height: 80px;
-    }
-
-    .sol-1 {
-      top: 10%;
-      left: -80px;
-    }
-    .sol-2 {
-      top: 30%;
-      left: 40px;
-    }
-    .sol-3 {
-      top: 50%;
-      left: -120px;
-    }
-    .sol-4 {
-      top: 70%;
-      left: 80px;
-    }
-  }
 </style>
 
 <div class="banner" id="home">

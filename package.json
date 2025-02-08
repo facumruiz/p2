@@ -13,6 +13,7 @@
     "@astrojs/tailwind": "^6.0.0",
     "@heroicons/react": "^1.0.6",
     "astro": "^5.2.5",
+    "esbuild": "^0.25.0",
     "react-icons": "^5.4.0"
   },
   "devDependencies": {

@@ -20,7 +20,6 @@ import project5Webm from "../assets/rfidhub.webm";
         gap: 2rem; /* gap-8 */
         padding: 2rem 15rem; /* p-8 with left and right padding */
         position: relative;
-     
         overflow: hidden;
     }
 
@@ -37,6 +36,8 @@ import project5Webm from "../assets/rfidhub.webm";
         object-fit: cover; /* Ensure the video covers the entire container */
         display: block;
         transition: transform 0.3s;
+        clip-path: inset(100% 0 0 0);
+        animation: reveal 2s forwards;
     }
 
     .project:hover video {
@@ -62,8 +63,15 @@ import project5Webm from "../assets/rfidhub.webm";
         box-sizing: border-box;
     }
 
+    .project .overlay h3 {
+        font-size: 3rem; /* text-base */
+        padding-bottom: 2.5%;
+        font-weight: bold; /* Make the text bold */
+    }
+
     .project .overlay p {
-        margin-bottom: 1rem;
+        padding-bottom: 3%;
+        font-size: 1.2rem; /* text-base */
     }
 
     .project .overlay a {
@@ -87,15 +95,19 @@ import project5Webm from "../assets/rfidhub.webm";
     .project1 {
         grid-area: project1;
     }
+
     .project2 {
         grid-area: project2;
     }
+
     .project3 {
         grid-area: project3;
     }
+
     .project4 {
         grid-area: project4;
     }
+
     .project5 {
         grid-area: project5;
     }
@@ -109,47 +121,12 @@ import project5Webm from "../assets/rfidhub.webm";
                 "project5"
                 "project3"
                 "project4";
-            padding: 2rem; /* Adjust padding for medium screens */
+            padding: 3rem; /* Adjust padding for medium screens */
         }
 
         .project {
-            height: 400px; /* Adjust height for medium screens */
+            height: 500px; /* Adjust height for medium screens */
         }
-    }
-
-    @media (max-width: 768px) {
-        .projects {
-            grid-template-columns: 1fr; /* Single column layout for small screens */
-            padding: 1rem; /* Adjust padding for small screens */
-        }
-
-        .project {
-            height: 300px; /* Adjust height for small screens */
-        }
-    }
-
-    @media (max-width: 480px) {
-        .projects {
-            grid-template-columns: 1fr; /* Single column layout for extra small screens */
-            padding: 1rem; /* Adjust padding for extra small screens */
-        }
-
-        .project {
-            height: 200px; /* Adjust height for extra small screens */
-        }
-    }
-
-    @keyframes reveal {
-        0% {
-            clip-path: inset(100% 0 0 0);
-        }
-        100% {
-            clip-path: inset(0 0 0 0);
-        }
-    }
-    .project video {
-        clip-path: inset(100% 0 0 0);
-        animation: reveal 2s forwards;
     }
 
     @keyframes reveal {

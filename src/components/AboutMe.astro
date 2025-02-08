@@ -8,12 +8,12 @@
    }
 
    .intro h1 {
-       font-size: 2.5rem;
+       font-size: 8rem; /* Increased font size */
        margin-bottom: 1rem;
    }
 
    .intro p {
-       font-size: 1.2rem;
+       font-size: 2rem; /* Increased font size */
        color: #666;
        max-width: 800px;
        margin: 0 auto;
@@ -42,7 +42,7 @@
  }
 
  .container {
-   padding: 10px 40px;
+   padding: 20px 50px; /* Increased padding */
    position: relative;
    background-color: inherit;
    width: 50%;
@@ -100,37 +100,64 @@
  }
 
  .content {
-   padding: 20px 30px;
-   background-color: #fff;
-   position: relative;
-   border-radius: 6px;
+  padding: 30px 40px; /* Increased padding */
+  background-color: #fff;
+  position: relative;
+  border-radius: 6px;
  }
 
- @media screen and (max-width: 600px) {
-   .timeline::after {
-     left: 31px;
-   }
+ .content h2 {
+  font-size: 2.5rem; /* Increased font size */
+  font-weight: bold; /* Bold text */
+ }
 
-   .container {
-     width: 100%;
-     padding-left: 70px;
-     padding-right: 25px;
-   }
+ .content p {
+   font-size: 1.5rem; /* Increased font size */
+ }
 
-   .container::before {
-     left: 60px;
-     border: medium solid #333;
-     border-width: 10px 10px 10px 0;
-     border-color: transparent #333 transparent transparent;
-   }
+.left {
+  width: 75%;
+  transform: translateX(-290px);
+}
 
-   .left::after, .right::after {
-     left: 15px;
-   }
+ .right {
+   width: 75%;
+ }
 
-   .right {
-     left: 0%;
-   }
+ @media (max-width: 1024px) {
+  
+
+  .intro h1 {
+    font-size: 4rem;
+  }
+
+  .intro p {
+    font-size: 2rem;
+  }
+
+  .content {
+    padding: 0px 20px;
+    padding-bottom: 10px;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+    padding-bottom: 10px;
+
+  }
+  .content p {
+    font-size: 1rem;
+  }
+  .left {
+  width: 50%;
+  transform: translateX(-10px);
+
+}
+
+ .right {
+   width: 50%;
+ }
+
  }
 </style>
 
