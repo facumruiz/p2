@@ -13,13 +13,29 @@ import sol from "../assets/sol.png";
     font-family: "Roboto", sans-serif; /* more legible y atractiva */
     position: relative;
     overflow: hidden; /* Ensure the overflow is hidden */
+   
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+ 
 
   .content {
     margin: 0 auto;
     max-width: 1420px; /* max width for centering */
     width: 100%;
     padding: 0 1rem; /* Add padding for small screens */
+    animation: fadeIn 1s ease-in-out 0.5s; /* Add fade-in animation with delay */
+    animation-fill-mode: both;
   }
 
   .banner h1 {
@@ -57,13 +73,14 @@ import sol from "../assets/sol.png";
   .banner .sol {
     position: absolute;
     opacity: 0.5;
-    animation: rotate 20s linear infinite; /* Add animation for constant rotation */
+    animation: rotate 20s linear infinite, ease-in-out 1s; /* Add fade-in animation with delay */
     transition: transform 1s, filter 2s; /* Increase transition duration to 1s */
   }
 
   @keyframes rotate {
     from {
       transform: rotate(0deg);
+      
     }
     to {
       transform: rotate(360deg);
@@ -126,8 +143,6 @@ import sol from "../assets/sol.png";
       width: 150px;
       height: 150px;
     }
-
- 
   }
 
   @media (max-width: 768px) {
@@ -198,7 +213,7 @@ import sol from "../assets/sol.png";
 <div class="banner" id="home">
   <div class="content">
     <h1>Facundo M. Ruiz Perez</h1>
-    <h2>Desarrollador fullstack & IoT</h2>
+    <h2>Full Stack & IoT Developer</h2>
     <a href="#contact" class="contact-button">Contáctame</a>
   </div>
   <img src={sol.src} alt="Sol 1" class="sol sol-1" />
