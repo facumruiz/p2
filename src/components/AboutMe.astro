@@ -2,6 +2,9 @@
 ---
 
 <style>
+  .timeline-horizontal{
+    display: none;
+  }
   .intro {
        text-align: center;
        padding: 2rem 0;
@@ -125,40 +128,51 @@
  }
 
  @media (max-width: 1024px) {
-  
-
-  .intro h1 {
-    font-size: 4rem;
+  .timeline {
+    display: none !important;
+  }
+  .timeline-horizontal{
+    display: block;
+  }
+ }
+ .timeline-horizontal {
+    overflow-x: auto;
+   
+    padding: 2rem 0;
+    cursor: grab;
+    margin-left: 50px;
+  margin-right: 50px;
   }
 
-  .intro p {
+  .timeline-horizontal:active {
+    cursor: grabbing;
+  }
+
+  .timeline-container {
+    display: inline-flex;
+  }
+
+  .timeline-card {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0 10px;
+    width: 900px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .timeline-card h2 {
+    font-size: 2.5rem; /* Increased font size */
+    margin-bottom: 1rem;
+    font-weight: bold; /* Bold text */
+  }
+
+  .timeline-card p {
     font-size: 2rem;
   }
 
-  .content {
-    padding: 0px 20px;
-    padding-bottom: 10px;
-  }
-
-  .content h2 {
-    font-size: 2rem;
-    padding-bottom: 10px;
-
-  }
-  .content p {
-    font-size: 1rem;
-  }
-  .left {
-  width: 50%;
-  transform: translateX(-10px);
-
-}
-
- .right {
-   width: 50%;
- }
-
- }
 </style>
 
 <section class="timeline-section" id="about">
@@ -172,44 +186,110 @@
    <div class="container left">
      <div class="content">
        <h2>2019</h2>
-       <p>This year, after years of learning to program PIC microcontrollers in C during high school, I had the opportunity to do professional internships in a manufacturing lab. There, I provided training and technical consulting in programming focused on robotics and microcontrollers.</p>
+       <p>Completed professional internships in a manufacturing lab, providing training and technical consulting in robotics and microcontroller programming.</p>
      </div>
    </div>
    <div class="container right">
      <div class="content">
        <h2>2020</h2>
-       <p>In 2020, I worked for a company that developed surgical training simulators. I automated a spreadsheet where trainees tracked their best times for each exercise, using Python and various data analysis libraries.</p>
+       <p>Automated a spreadsheet for a surgical training simulator company, optimizing trainee performance tracking with Python and data analysis libraries.</p>
      </div>
    </div>
    <div class="container left">
      <div class="content">
        <h2>2021</h2>
-       <p>This year, I taught myself web development (HTML/CSS, JavaScript), building basic personal projects and learning frameworks like Bootstrap. I also gained experience in database management with Firebase. Afterward, I had the opportunity to work with several clients, managing both the maintenance and development of their websites.</p>
+       <p> Self-taught in web development (HTML/CSS, JavaScript) and database management with Firebase. Built personal projects, learned Bootstrap, and worked with clients on website maintenance and development.</p>
      </div>
    </div>
    <div class="container right">
      <div class="content">
        <h2>2022</h2>
-       <p>This year, after gaining initial development experience, I deepened my backend skills with Node.js, creating my first test APIs using FreeCodeCamp resources. At the same time, I was pursuing a Technical Programming degree at UNSAM.</p>
+       <p>Focused on backend development with Node.js, creating test APIs using FreeCodeCamp. Studied Technical Programming at UNSAM.</p>
      </div>
    </div>
    <div class="container left">
      <div class="content">
        <h2>2023</h2>
-       <p>This year has been one of the best in my professional career. I completed a Fullstack MERN diploma at UTN and learned to develop an application from scratch. Additionally, I took certifications and courses from Google on Python automation. I also had the opportunity to work for a football academy, developing software.</p>
+       <p>Completed a Fullstack MERN diploma at UTN, developed an application from scratch, earned Google certifications in Python automation, and built software for a football academy.</p>
      </div>
    </div>
    <div class="container right">
     <div class="content">
       <h2>2024</h2>
-      <p>This year, I decided to shift my professional focus by leaving the programming degree at UNSAM to specialize in embedded systems. I enrolled in a Technician in Embedded Systems and IoT program, where I learned technologies like ESP-IDF and SQL databases. The most exciting part was applying my knowledge of APIs and Node.js to the world of IoT and electronics.</p>
+      <p>Shifted focus to embedded systems, enrolling in an Embedded Systems & IoT program. Learned ESP-IDF, SQL, and integrated APIs and Node.js into IoT and electronics projects.</p>
     </div>
   </div>
   <div class="container left">
     <div class="content">
       <h2>2025</h2>
-      <p>I’m excited to apply everything I’ve learned in a professional development environment, though I’m unsure of what the future holds. Academically, I plan to continue my studies in Embedded Systems and eventually pursue a master’s degree. In my free time, I work on personal projects and explore new technologies like NestJS, Next.js, GraphQL, and Astro.</p>
+      <p> Looking to apply my skills in a professional environment while continuing my studies in Embedded Systems, with plans for a future master’s degree. In my free time, I work on personal projects and explore technologies like NestJS, Next.js, GraphQL, and Astro.</p>
     </div>
   </div>
  </div>
+<div class="timeline-horizontal">
+  <div class="timeline-container">
+    <div class="timeline-card">
+      <h2>2019</h2>
+      <p>Completed professional internships in a manufacturing lab, providing training and technical consulting in robotics and microcontroller programming.</p>
+    </div>
+    <div class="timeline-card">
+      <h2>2020</h2>
+      <p>Automated a spreadsheet for a surgical training simulator company, optimizing trainee performance tracking with Python and data analysis libraries.</p>
+    </div>
+    <div class="timeline-card">
+      <h2>2021</h2>
+      <p>Self-taught in web development (HTML/CSS, JavaScript) and database management with Firebase. Built personal projects, learned Bootstrap, and worked with clients on website maintenance and development.</p>
+    </div>
+    <div class="timeline-card">
+      <h2>2022</h2>
+      <p>Focused on backend development with Node.js, creating test APIs using FreeCodeCamp. Studied Technical Programming at UNSAM.</p>
+    </div>
+    <div class="timeline-card">
+      <h2>2023</h2>
+      <p>Completed a Fullstack MERN diploma at UTN, developed an application from scratch, earned Google certifications in Python automation, and built software for a football academy.</p>
+    </div>
+    <div class="timeline-card">
+      <h2>2024</h2>
+      <p>Shifted focus to embedded systems, enrolling in an Embedded Systems & IoT program. Learned ESP-IDF, SQL, and integrated APIs and Node.js into IoT and electronics projects.</p>
+    </div>
+    <div class="timeline-card">
+      <h2>2025</h2>
+      <p>Looking to apply my skills in a professional environment while continuing my studies in Embedded Systems, with plans for a future master’s degree. In my free time, I work on personal projects and explore technologies like NestJS, Next.js, GraphQL, and Astro.</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const timeline = document.querySelector('.timeline-horizontal');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  timeline.addEventListener('mousedown', (e) => {
+    isDown = true;
+    timeline.classList.add('active');
+    startX = e.pageX - timeline.offsetLeft;
+    scrollLeft = timeline.scrollLeft;
+  });
+
+  timeline.addEventListener('mouseleave', () => {
+    isDown = false;
+    timeline.classList.remove('active');
+  });
+
+  timeline.addEventListener('mouseup', () => {
+    isDown = false;
+    timeline.classList.remove('active');
+  });
+
+  timeline.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - timeline.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    timeline.scrollLeft = scrollLeft - walk;
+  });
+</script>
+
 </section>
