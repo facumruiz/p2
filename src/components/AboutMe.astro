@@ -4,202 +4,210 @@
 
 <style>
   .timeline-horizontal {
-    display: none;
-  }
-  .intro {
-    text-align: center;
-    padding: 2rem 0;
-  }
+  display: none;
+}
 
-  .intro h1 {
-    font-size: 4rem; /* Increased font size */
-    margin-bottom: 1rem;
-    font-weight: bold; /* Bold text */
-  }
+.intro {
+  text-align: center;
+  padding: 2rem 0;
+}
 
-  .intro p {
-    font-size: 2rem; /* Increased font size */
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .timeline-section {
-    background-color: #ebe5dc; /* beige */
-    padding: 2rem 0;
-  }
+.intro h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
 
+.intro p {
+  font-size: 2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-section {
+  background-color: #ebe5dc;
+  padding: 2rem 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 20px 50px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #333;
+  border: 4px solid #ebe5dc;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+  width: 75%;
+  transform: translateX(-290px);
+}
+
+.right {
+  left: 50%;
+  width: 75%;
+}
+
+.left::before,
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  border: medium solid #333;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #333 transparent transparent;
+}
+
+.left::before {
+  right: 30px;
+}
+
+.right::before {
+  left: 30px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #333;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 30px 40px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 6px;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  z-index: 0;
+}
+
+.timeline-container {
+  display: inline-flex;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: -85px;
+  width: 5px;
+  height: 30px;
+  background-color: #333;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+.timeline-year {
+  position: absolute;
+  top: -50px;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.timeline-card {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 0 10px;
+  width: 895px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.timeline-card p {
+  font-size: 2rem;
+}
+
+.timeline-horizontal {
+  position: relative;
+  overflow-x: auto;
+  padding: 2rem 0;
+  padding-bottom: 10rem;
+  cursor: grab;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 100px;
+}
+
+/* RESPONSIVE DESIGN */
+
+
+
+/* Dispositivos hasta 1440px */
+@media (max-width: 1440px) {
   .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-
-  .timeline::after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    background-color: #333;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-  }
-
-  .container {
-    padding: 20px 50px; /* Increased padding */
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-  }
-
-  .container::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: #333;
-    border: 4px solid #ebe5dc;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  .left {
-    left: 0;
-  }
-
-  .right {
-    left: 50%;
-  }
-
-  .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid #333;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #333;
-  }
-
-  .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid #333;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #333 transparent transparent;
-  }
-
-  .right::after {
-    left: -16px;
-  }
-
-  .content {
-    padding: 30px 40px; /* Increased padding */
-    background-color: #fff;
-    position: relative;
-    border-radius: 6px;
-  }
-
-  .content h2 {
-    font-size: 2.5rem; /* Increased font size */
-    font-weight: bold; /* Bold text */
-  }
-
-  .content p {
-    font-size: 1.5rem; /* Increased font size */
-  }
-
-  .left {
-    width: 75%;
-    transform: translateX(-290px);
-  }
-
-  .right {
-    width: 75%;
-  }
-
-  @media (max-width: 1024px) {
-    .timeline {
-      display: none !important;
-    }
-    .timeline-horizontal {
-      display: block;
-    }
+    display: none !important;
   }
   .timeline-horizontal {
-    position: relative;
-    overflow-x: auto;
-
-    padding: 2rem 0;
-    padding-bottom: 10rem;
-    cursor: grab;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding-top: 100px;
+    display: block;
   }
-
   .timeline-line {
-    position: absolute;
-    top: 30px; /* Ajustar la altura de la línea */
-    left: 0;
-    width: 726%;
-    height: 4px;
-
-    background-color: #333;
-    z-index: 0;
+    width: 542%;
   }
+}
 
-  .timeline-container {
-    display: inline-flex;
-    position: relative;
-    padding-top: 30px; /* Espacio para los puntos */
-    padding-bottom: 30px; /* Espacio para los puntos */
+/* Dispositivos hasta 1024px */
+@media (max-width: 1024px) {
+  .timeline-line {
+    width: 727%;
   }
+}
 
-  .timeline-dot {
-    position: absolute;
-    top: -85px; /* Ajustar la posición de los puntos */
-    width: 5px;
-    height: 30px;
-    background-color: #333;
-
-    z-index: 1;
-    transform: translateX(-50%);
-  }
-  .timeline-year {
-    position: absolute;
-    top: -50px; /* Ajustar la posición de los puntos */
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: bold; /* Bold text */
-  }
-
-  .timeline-card {
-    display: inline-block;
-    background-color: #fff;
-    border-radius: 6px;
-    padding: 20px;
-    margin: 0 10px;
-    width: 895px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: relative;
-  }
-
-  .timeline-card p {
-    font-size: 2rem;
-  }
 </style>
 
 <section class="timeline-section" id="about">
@@ -285,19 +293,19 @@
     <!-- Línea superior -->
 
     <div class="timeline-container">
-      <h2 class="timeline-year" style="left: 6%;">2019</h2>
+      <h2 class="timeline-year" style="left: 6.2%;">2019</h2>
       <div class="timeline-dot" style="left: 7%;"></div>
-      <h2 class="timeline-year" style="left: 20%;">2020</h2>
+      <h2 class="timeline-year" style="left: 20.2%;">2020</h2>
       <div class="timeline-dot" style="left: 21%;"></div>
-      <h2 class="timeline-year" style="left: 35%;">2021</h2>
+      <h2 class="timeline-year" style="left: 35.2%;">2021</h2>
       <div class="timeline-dot" style="left: 36%;"></div>
-      <h2 class="timeline-year" style="left: 49%;">2022</h2>
+      <h2 class="timeline-year" style="left: 49.2%;">2022</h2>
       <div class="timeline-dot" style="left: 50%;"></div>
-      <h2 class="timeline-year" style="left: 64%;">2023</h2>
+      <h2 class="timeline-year" style="left: 64.2%;">2023</h2>
       <div class="timeline-dot" style="left: 65%;"></div>
-      <h2 class="timeline-year" style="left: 78%;">2024</h2>
+      <h2 class="timeline-year" style="left: 78.2%;">2024</h2>
       <div class="timeline-dot" style="left: 79%;"></div>
-      <h2 class="timeline-year" style="left: 92%;">2025</h2>
+      <h2 class="timeline-year" style="left: 92.2%;">2025</h2>
       <div class="timeline-dot" style="left: 93%;"></div>
       <div class="timeline-card">
         <p>
