@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <style>
@@ -6,14 +7,8 @@
     background-color: #ebe5dc; /* beige */
     padding: 2rem;
     text-align: center;
-
   }
 
-
-  .contact-section h2 {
-    font-size: 8rem; /* text-3xl */
-    margin-bottom: 1rem; /* mb-4 */
-  }
   .contact-section h2 {
     font-size: 4rem;
     font-weight: bold;
@@ -35,7 +30,9 @@
     border: 2px solid #333; /* dark border */
     border-radius: 25px; /* rounded */
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
   }
 
   .contact-links a:hover {
@@ -49,33 +46,68 @@
     color: #333; /* dark text */
   }
   @media (max-width: 1024px) {
-  
+    .contact-section h2 {
+      font-size: 4rem;
+    }
 
-  .contact-section h2 {
-    font-size: 4rem;
+    .contact-info p {
+      font-size: 1.5rem;
+    }
+
+    .contact-links a {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
   }
 
-  .contact-info p {
-    font-size: 1.5rem;
+  /* RESPONSIVE DESIGN */
+
+  /* Dispositivos hasta 1920px */
+  @media (max-width: 1920px) {
+    /* Aquí puedes agregar tus reglas */
   }
 
-  .contact-links a {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
+  /* Dispositivos hasta 1440px */
+  @media (max-width: 1440px) {
+    /* Aquí puedes agregar tus reglas */
+  }
 
- }
+  /* Dispositivos hasta 1024px */
+  @media (max-width: 1024px) {
+    /* Aquí puedes agregar tus reglas */
+  }
+
+  /* Dispositivos hasta 768px (Tablets) */
+  @media (max-width: 768px) {
+    /* Aquí puedes agregar tus reglas */
+  }
+
+  /* Dispositivos hasta 480px (Smartphones) */
+  @media (max-width: 480px) {
+    /* Aquí puedes agregar tus reglas */
+    .contact-section h2 {
+      font-size: 2rem;
+    }
+    .contact-section p {
+      font-size: 1rem;
+    }
+
+    .contact-section a {
+      font-size: 0.5rem;
+      padding: 0.3rem 0.4rem;
+      border: 1px solid #333;
+      border-radius: 8px;
+    }
   }
 </style>
 
 <section class="contact-section" id="contact">
   <h2>Contact Me</h2>
   <div class="contact-links">
-    
     <div class="contact-info">
       <p>Phone: +54 11 5734-3042</p>
       <p>Email: facundoruizdev@gmail.com</p>
     </div>
     <a href="mailto:facundoruizdev@gmail.com">Send an Email</a>
-    
   </div>
 </section>

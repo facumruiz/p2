@@ -8,7 +8,7 @@ import project5Webm from "../assets/rfidhub.webm";
 
 <style>
     .projects {
-        background-color: #ebe5dc; /* beige */
+        background-color: #ebe5dc;
         background-size: cover;
         background-position: center;
         display: grid;
@@ -17,8 +17,8 @@ import project5Webm from "../assets/rfidhub.webm";
             "project1 project2"
             "project5 project3"
             "project4 project4";
-        gap: 2rem; /* gap-8 */
-        padding: 2rem 15rem; /* p-8 with left and right padding */
+        gap: 2rem;
+        padding: 2rem 15rem;
         position: relative;
         overflow: hidden;
     }
@@ -26,14 +26,14 @@ import project5Webm from "../assets/rfidhub.webm";
     .project {
         position: relative;
         overflow: hidden;
-        border-radius: 10px; /* rounded-lg */
-        height: 500px; /* Set a fixed height for the project images */
+        border-radius: 10px;
+        height: 500px;
     }
 
     .project video {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Ensure the video covers the entire container */
+        object-fit: cover;
         display: block;
         transition: transform 0.3s;
         clip-path: inset(100% 0 0 0);
@@ -50,7 +50,7 @@ import project5Webm from "../assets/rfidhub.webm";
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+        background-color: rgba(0, 0, 0, 0.9);
         color: #fff;
         display: flex;
         flex-direction: column;
@@ -64,14 +64,14 @@ import project5Webm from "../assets/rfidhub.webm";
     }
 
     .project .overlay h3 {
-        font-size: 3rem; /* text-base */
+        font-size: 2rem;
         padding-bottom: 2.5%;
-        font-weight: bold; /* Make the text bold */
+        font-weight: bold;
     }
 
     .project .overlay p {
         padding-bottom: 3%;
-        font-size: 1.2rem; /* text-base */
+        font-size: 1.2rem;
     }
 
     .project .overlay a {
@@ -92,43 +92,71 @@ import project5Webm from "../assets/rfidhub.webm";
         opacity: 1;
     }
 
-    .project1 {
-        grid-area: project1;
-    }
+    /* Ajustes responsive */
 
-    .project2 {
-        grid-area: project2;
-    }
-
-    .project3 {
-        grid-area: project3;
-    }
-
-    .project4 {
-        grid-area: project4;
-    }
-
-    .project5 {
-        grid-area: project5;
-    }
-
-    @media (max-width: 1280px) {
+    /* Pantallas hasta 1440px */
+    @media (max-width: 1440px) {
         .projects {
-            grid-template-columns: 1fr; /* Single column layout for medium screens */
+            padding: 2rem 10rem;
+            gap: 1.5rem;
+        }
+    }
+
+    /* Pantallas hasta 1024px */
+    @media (max-width: 1024px) {
+        .projects {
+            padding: 2rem 5rem;
+            grid-template-columns: 1fr;
             grid-template-areas:
                 "project1"
                 "project2"
                 "project5"
                 "project3"
                 "project4";
-            padding: 3rem; /* Adjust padding for medium screens */
         }
-
         .project {
-            height: 500px; /* Adjust height for medium screens */
+            height: 450px;
         }
     }
 
+    /* Tablets hasta 768px */
+    @media (max-width: 768px) {
+        .projects {
+            padding: 2rem;
+        }
+        .project {
+            height: 400px;
+        }
+    }
+
+    /* Móviles hasta 480px */
+    @media (max-width: 480px) {
+        .projects {
+            padding: 1rem;
+            gap: 1rem;
+        }
+        .project {
+            height: 220px; /* Reduzco la altura para que no sea tan larga */
+        }
+        .project .overlay h3 {
+            font-size: 1.2rem; /* Reduzco el tamaño del título */
+        }
+        .project .overlay p {
+            font-size: 0.8rem; /* Aumento un poco para mejorar la legibilidad */
+        }
+        .project .overlay a {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 0.7rem; /* Ajusto el tamaño del botón */
+        }
+    }
+
+    /* Animación de revelado */
     @keyframes reveal {
         0% {
             clip-path: inset(100% 0 0 0);
@@ -148,9 +176,17 @@ import project5Webm from "../assets/rfidhub.webm";
         <div class="overlay">
             <h3>FOOTBALL MANAGER</h3>
             <p>
-                A soccer team management app using a CRUD system with Node.js and React, deployed on AWS Lightsail. It manages player data and offers filtering options. Technologies used include MongoDB, Express.js, React, and Node.js. Currently, I'm migrating it to more modern technologies.
+                A soccer team management app using a CRUD system with Node.js
+                and React, deployed on AWS Lightsail. It manages player data and
+                offers filtering options. Technologies used include MongoDB,
+                Express.js, React, and Node.js. Currently, I'm migrating it to
+                more modern technologies.
             </p>
-            <a title="Interactive demo of Football Manager project" aria-label="View the interactive demo of Football Manager project" href="https://fuchi-manager.onrender.com/">View Demo</a>
+            <a
+                title="Interactive demo of Football Manager project"
+                aria-label="View the interactive demo of Football Manager project"
+                href="https://fuchi-manager.onrender.com/">View Demo</a
+            >
         </div>
     </div>
     <div class="project project2">
@@ -161,7 +197,11 @@ import project5Webm from "../assets/rfidhub.webm";
         <div class="overlay">
             <h3>HOW TRAINNER</h3>
             <p>
-                A system migrated from Python-based software to a MERN stack environment for a surgical training simulator. It records exercise durations and enables graphical analysis of best times and completed repetitions. The system uses MongoDB, Express.js, React, and Node.js technologies.
+                A system migrated from Python-based software to a MERN stack
+                environment for a surgical training simulator. It records
+                exercise durations and enables graphical analysis of best times
+                and completed repetitions. The system uses MongoDB, Express.js,
+                React, and Node.js technologies.
             </p>
         </div>
     </div>
@@ -173,9 +213,17 @@ import project5Webm from "../assets/rfidhub.webm";
         <div class="overlay">
             <h3>GAME COLORS</h3>
             <p>
-                A mental agility game built with React and MongoDB to track and store reaction times. The game challenges users to quickly select the correct color based on visual cues, testing their decision-making and focus. The application is deployed on Vercel for easy access and performance.
+                A mental agility game built with React and MongoDB to track and
+                store reaction times. The game challenges users to quickly
+                select the correct color based on visual cues, testing their
+                decision-making and focus. The application is deployed on Vercel
+                for easy access and performance.
             </p>
-            <a title="Interactive demo of Game Colors project" aria-label="View the interactive demo of Game Colors project" href="https://coloresfront.onrender.com/">View Demo</a>
+            <a
+                title="Interactive demo of Game Colors project"
+                aria-label="View the interactive demo of Game Colors project"
+                href="https://coloresfront.onrender.com/">View Demo</a
+            >
         </div>
     </div>
     <div class="project project4">
@@ -186,7 +234,13 @@ import project5Webm from "../assets/rfidhub.webm";
         <div class="overlay">
             <h3>ONE TO ONE</h3>
             <p>
-                A system for a one-to-one courier company that uses HTML and CSS for the interface, JavaScript for interactivity, and Firebase with Firestore for real-time data management. Firebase Cloud Functions are used to update shipment statuses and send email notifications, while Node.js manages server processes and facilitates communication between the client, backend, and database.
+                A system for a one-to-one courier company that uses HTML and CSS
+                for the interface, JavaScript for interactivity, and Firebase
+                with Firestore for real-time data management. Firebase Cloud
+                Functions are used to update shipment statuses and send email
+                notifications, while Node.js manages server processes and
+                facilitates communication between the client, backend, and
+                database.
             </p>
         </div>
     </div>
@@ -198,9 +252,15 @@ import project5Webm from "../assets/rfidhub.webm";
         <div class="overlay">
             <h3>RFIDHUB</h3>
             <p>
-                An API for RFID card authentication developed in Node.js, handling user authentication using UID data from the cards. It offers endpoints for managing users, roles, and access control.
+                An API for RFID card authentication developed in Node.js,
+                handling user authentication using UID data from the cards. It
+                offers endpoints for managing users, roles, and access control.
             </p>
-            <a title="Interactive demo of RFIDHUB project" aria-label="View the interactive demo of RFIDHUB project" href="https://www.youtube.com/watch?v=89fvR8XMqS8">View Demo</a>
+            <a
+                title="Interactive demo of RFIDHUB project"
+                aria-label="View the interactive demo of RFIDHUB project"
+                href="https://www.youtube.com/watch?v=89fvR8XMqS8">View Demo</a
+            >
         </div>
     </div>
 </section>

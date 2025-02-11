@@ -13,7 +13,6 @@ import sol from "../assets/sol.svg";
     font-family: "Roboto", sans-serif; /* more legible y atractiva */
     position: relative;
     overflow: hidden; /* Ensure the overflow is hidden */
-   
   }
 
   @keyframes fadeIn {
@@ -26,8 +25,6 @@ import sol from "../assets/sol.svg";
       transform: translateY(0);
     }
   }
-
- 
 
   .content {
     margin: 0 auto;
@@ -62,7 +59,9 @@ import sol from "../assets/sol.svg";
     border: 2px solid #333; /* dark border */
     border-radius: 25px; /* rounded */
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
   }
 
   .banner .contact-button:hover {
@@ -73,14 +72,17 @@ import sol from "../assets/sol.svg";
   .banner .sol {
     position: absolute;
     opacity: 0.5;
-    animation: rotate 20s linear infinite, ease-in-out 1s; /* Add fade-in animation with delay */
-    transition: transform 1s, filter 2s; /* Increase transition duration to 1s */
+    animation:
+      rotate 20s linear infinite,
+      ease-in-out 1s; /* Add fade-in animation with delay */
+    transition:
+      transform 1s,
+      filter 2s; /* Increase transition duration to 1s */
   }
 
   @keyframes rotate {
     from {
       transform: rotate(0deg);
-      
     }
     to {
       transform: rotate(360deg);
@@ -150,6 +152,83 @@ import sol from "../assets/sol.svg";
     }
   }
 
+  /* RESPONSIVE DESIGN */
+
+  /* Dispositivos hasta 1920px */
+  @media (max-width: 1920px) {
+    /* Aquí puedes agregar tus reglas */
+  }
+
+  /* Dispositivos hasta 1440px */
+  @media (max-width: 1440px) {
+    /* Aquí puedes agregar tus reglas */
+  }
+
+  /* Dispositivos hasta 1024px */
+  @media (max-width: 1024px) {
+    /* Aquí puedes agregar tus reglas */
+  }
+
+  /* Dispositivos hasta 768px (Tablets) */
+  @media (max-width: 768px) {
+    /* Aquí puedes agregar tus reglas */
+  }
+
+  /* Dispositivos hasta 480px (Smartphones) */
+  @media (max-width: 480px) {
+    /* Aquí puedes agregar tus reglas */
+    .banner {
+      background-color: #ebe5dc; /* beige */
+      color: #333; /* dark text */
+      padding: 0.5rem; /* p-8 */
+      text-align: left;
+      font-family: "Roboto", sans-serif; /* more legible y atractiva */
+      position: relative;
+      overflow: hidden; /* Ensure the overflow is hidden */
+    }
+
+    .banner h1 {
+      font-size: 1.5rem; /* text-5xl */
+      font-weight: 700; /* bold */
+      margin-bottom: 0.5rem; /* mb-2 */
+    }
+
+    .banner h2 {
+      font-size: 1rem; /* text-3xl */
+      font-weight: 300; /* light */
+      color: #555; /* text-gray-600 */
+      font-style: italic;
+      margin-bottom: 1rem; /* mb-4 */
+    }
+    .banner .contact-button {
+      display: inline-block;
+      padding: 0.3rem 0.4rem; /* py-4 px-8 */
+      font-size: 9px; /* text-lg */
+
+      color: #333; /* dark text */
+      background-color: rgba(235, 229, 220, 0.7); /* translucent beige */
+      border: 1px solid #333; /* dark border */
+      border-radius: 8px; /* rounded */
+      text-decoration: none;
+      transition:
+        background-color 0.3s,
+        color 0.3s;
+    }
+
+    .sol-1 {
+      top: 5%;
+      left: 290px;
+      width: 80px;
+      height: 80px;
+    }
+
+    .sol-2 {
+      top: 40%;
+      left: 210px;
+      width: 80px;
+      height: 80px;
+    }
+  }
 </style>
 
 <div class="banner" id="home">
