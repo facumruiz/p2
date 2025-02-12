@@ -5,5 +5,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://facumruiz.github.io',
-  base: 'portfolio',
+  base: 'p2',
 });
